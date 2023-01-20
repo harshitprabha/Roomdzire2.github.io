@@ -1,0 +1,997 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  
+}
+
+/* ------------------------------Navigation-------------------- */
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  background-color: #dee2e6;
+  position: relative;
+  top: 0;
+  padding: 2.00rem;
+}
+
+.navbar .logo {
+  padding: 1.5rem;
+  font-size: 2rem;
+}
+
+.navbar .logo a {
+  transition: color 0.4s ease-in-out;
+}
+
+.navbar .logo a:hover {
+  color: #4c6ca0;
+}
+
+.navbar .nav-menu {
+  display: flex;
+  margin: -40px;
+}
+
+.nav-menu .nav-link {
+   margin: 0 1rem;
+   color: #101010;
+}
+
+
+
+.nav-menu .nav-link:hover {
+   color: #4c6ca0;
+}
+
+.nav-menu .nav-link .nav-icon {
+   margin-right: 0.3rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    right: -100vw;
+    top: 4rem;
+    flex-direction: column;
+    min-width: 400px;
+    text-align: right;
+    transition: 0.3s;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .nav-menu.active {
+    right: 20px;
+    
+  }
+  
+  .nav-menu .nav-link {
+     padding: 0.6rem 0px;
+     font-size: 1.05rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .hamburger:hover {
+     background: rgb(233, 231, 231);
+  }
+
+  .hamburger.active {
+     border: 1px dotted gray;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+
+
+
+
+
+/*  --------------------------myroom--------------------------------*/
+
+.note{
+  margin: 0%;
+  padding-top: 8%;
+  background-color: #ebf0f4; 
+  height: 281px;
+}
+.note h1{
+ font-size: 25px;
+ color: #101010;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.note p{
+  font-size: 15px;
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+}
+
+
+
+/* ---------------------------Slider-------------------------------- */
+
+
+
+#slider{
+  width:100%;
+  height:500px;
+  position:relative;
+  overflow:hidden;
+}
+@keyframes load{
+  from{left:-100%;}
+  to{left:0;}
+}
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 30s infinite;
+  -moz-animation:slide 30s infinite;
+  animation:slide 30s infinite;
+}
+.slider{
+  width:25%;
+  height:100%;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.slide img{
+  width:100%;
+  height:100%;
+}
+.slide img{
+  width:100%;
+  height:100%;
+}
+.image{
+  width:100%;
+  height:100%;
+}
+.image img{
+  width:100%;
+  height:auto;
+}
+
+.legend{
+  border:500px solid transparent;
+  border-left:800px solid rgba(52, 73, 94, .7);
+  border-bottom:0;
+  position:absolute;
+  bottom:0;
+}
+
+.content{
+  width:100%;
+  height:100%;
+  position:absolute;
+  overflow:hidden;
+}
+.content-txt{
+  width:400px;
+  height:150px;
+  float:left;
+  position:relative;
+  top:300px;
+  -webkit-animation:content-s 7.5s infinite;
+  -moz-animation:content-s 7.5s infinite;
+  animation:content-s 7.5s infinite;
+}
+.content-txt h1{
+  font-family:Arial;
+  text-transform:uppercase;
+  font-size:24px;
+  color:#fff;
+  text-align:left;
+  margin-left:30px;
+  padding-bottom:10px;
+}
+.content-txt h2{
+  font-family:arial;
+  font-weight:normal;
+  font-size:14px;
+  font-style:italic;
+  color:#fff;
+  text-align:left;
+  margin-left:30px;
+}
+
+.switch{
+  width:120px;
+  height:10px;
+  position:absolute;
+  bottom:50px;
+  z-index:99;
+  left:30px;
+}
+.switch > ul{
+  list-style:none;
+}
+.switch > ul > li{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#333;
+  float:left;
+  margin-right:5px;
+  cursor:pointer;
+}
+.switch ul{
+  overflow:hidden;
+}
+.on{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:#f39c12;
+  position:relative;
+  -webkit-animation:on 30s infinite;
+  -moz-animation:on 30s infinite;
+  animation:on 30s infinite;
+}
+
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+
+@-webkit-keyframes content-s{
+  0%{left:-420px;}
+  10%{left:0px;}
+  30%{left:0px;}
+  40%{left:0px;}
+  50%{left:0px;}
+  60%{left:0px;}
+  70%{left:0;}
+  80%{left:-420px;}
+  90%{left:-420px;}
+  100%{left:-420px;}
+}
+@-moz-keyframes content-s{
+  0%{left:-420px;}
+  10%{left:0px;}
+  30%{left:0px;}
+  40%{left:0px;}
+  50%{left:0px;}
+  60%{left:0px;}
+  70%{left:0;}
+  80%{left:-420px;}
+  90%{left:-420px;}
+  100%{left:-420px;}
+}
+@keyframes content-s{
+  0%{left:-420px;}
+  10%{left:20px;}
+  15%{left:0px;}
+  30%{left:0px;}
+  40%{left:0px;}
+  50%{left:0px;}
+  60%{left:0px;}
+  70%{left:0;}
+  80%{left:-420px;}
+  90%{left:-420px;}
+  100%{left:-420px;}
+}
+
+@-webkit-keyframes on{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:15px;
+  }
+  46%{
+    margin-left:15px;
+  }
+  50%{
+    margin-left:30px;
+  }
+  71%{
+    margin-left:30px;
+  }
+  75%{
+    margin-left:45px;
+  }
+  96%{
+    margin-left:45px;
+  }
+}
+
+@-moz-keyframes on{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:15px;
+  }
+  46%{
+    margin-left:15px;
+  }
+  50%{
+    margin-left:30px;
+  }
+  71%{
+    margin-left:30px;
+  }
+  75%{
+    margin-left:45px;
+  }
+  96%{
+    margin-left:45px;
+  }
+}
+
+@keyframes on{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:15px;
+  }
+  46%{
+    margin-left:15px;
+  }
+  50%{
+    margin-left:30px;
+  }
+  71%{
+    margin-left:30px;
+  }
+  75%{
+    margin-left:45px;
+  }
+  96%{
+    margin-left:45px;
+  }
+}
+
+a{text-decoration:none;color:inherit;}
+html{width:100%;height:100%;}
+
+body{
+  background:#fff;
+}
+
+
+/* --------------------------card------------------------- */
+
+#area{
+  margin: 11px;
+  padding: 0px 0px;
+}
+
+ #area h1{
+  display: flex;
+  margin-top: 25px;
+  padding: 37px 19px;
+  text-align: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #101010;
+} 
+
+.review{
+  
+  background-color: #dee2e6;
+}
+
+
+
+
+/*............................About Section............................. */
+
+.noteabout{
+  margin: 0%;
+  padding-top: 0%;
+  background-color: #eae9e5;
+  height: 250px;
+}
+.noteabout h1{
+ font-size: 25px;
+ color: #101010;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.noteabout p{
+  font-size: 48px;
+  color: black;
+}
+
+h1, h2, h3, h4 ,h5 ,h6, p{
+  margin: 0;
+  padding: 0;
+}
+ 
+#about{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+background-color: #b8c4c6;
+width: 100%;
+}
+
+.testimonials{
+  padding-bottom: 2.2em; 
+  text-align: center;
+  color: #fff;
+}
+.testimonials h1{
+  color: #222;
+  font-size: 35px;
+}
+.testimonials .test-body{padding: 1em;}
+.testimonials .item{ 
+  text-align: center;
+  padding: 1em 0;
+}
+.testimonials img{
+  width: 4.8em;
+  height: 4.8em;
+  border-radius: 50%;
+  margin-left: 145px;
+}
+.testimonials .name{color: white;}
+.testimonials .desig{
+  font-size: 0.7em;
+  padding: 0.5em 0;
+  color: rgb(1 1 1);
+}
+.testimonials .share{
+  margin: 0 auto;
+  width: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.testimonials i{
+  color: #bfbfbf;
+  padding: 0.5em 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.testimonials i:hover{color: blue;}
+.testimonials p{
+  max-width: 27em;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+
+
+@media (min-width: 38.4rem){
+  .testimonials{
+      font-size: 1.2em;
+  }
+  .testimonials .test-body{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+  }
+  .testimonials p{
+      text-align: left;
+      padding: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+/* -------------Contact us section---------------- */
+
+
+
+
+
+
+
+.location{
+  width: 80%;
+  margin: auto;
+  padding: 80px 0px;
+
+}
+.location iframe{
+width: 100%;
+}
+
+#contact{
+  background-color: #dee2e6;
+}
+
+#success-message {
+  opacity: 0;
+}
+
+.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+  padding: 0 20% 0 20%;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.form-title {
+  padding: 25px;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.form-group .form-control {
+  box-shadow: none;
+  border-bottom: 1px;
+  border-style: none none solid none;
+  border-radius:0; 
+  border-color: #000;
+}
+
+.form-group .form-control:focus {
+	box-shadow: none;
+  border-width: 0 0 2px 0;
+  border-color: #000;
+  
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-mod.btn-large {
+    height: auto;
+    padding: 13px 52px;
+    font-size: 15px;
+}
+
+.btn-mod.btn-border {
+    color: #000000;
+    border: 1px solid #000000;
+    background: transparent;
+}
+
+.btn-mod, a.btn-mod {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4px 13px;
+    color: #fff;
+    background: rgba(34,34,34, .9);
+    border: 1px solid transparent;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+.btn-mod.btn-border:hover, .btn-mod.btn-border:active, .btn-mod.btn-border:focus, .btn-mod.btn-border:active:focus {
+    color: #fff;
+    border-color: #000;
+    background: #000;
+    outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .btn-mod.btn-large {
+       padding: 6px 16px;
+       font-size: 11px;
+    }
+  
+    .form-title {
+        font-size: 20px;
+  }
+}
+
+
+
+
+
+
+/* ------------------------Bohra Ganeshji---------------------- */
+
+
+
+
+
+.card-text{
+color: black;
+}
+
+
+.room-rent{
+  margin: 11px;
+  padding: 5px 6px;
+  font-size: 20px;
+  color: black;
+}
+
+.room-rent span{
+  color: green;
+}
+
+
+
+
+
+
+/* --------------Room Details------------------------ */
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    line-height: 1.5;
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+.product-rating{
+    color: #ffc107;
+}
+.product-rating span{
+    font-weight: 600;
+    color: #252525;
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail ul li span{
+    font-weight: 400;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+}
+.purchase-info input,
+.purchase-info .btn{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+.purchase-info input{
+    width: 60px;
+}
+.purchase-info .btn{
+    cursor: pointer;
+    color: #fff;
+}
+.purchase-info .btn:first-of-type{
+    background: #256eff;
+}
+.purchase-info .btn:last-of-type{
+    background: #f64749;
+}
+.purchase-info .btn:hover{
+    opacity: 0.9;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+.purchase-info a{
+color: #fff;
+text-decoration: none;
+}
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 283vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+} 
